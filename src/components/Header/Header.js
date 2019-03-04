@@ -46,6 +46,7 @@ export default class Header extends Component {
           </Link>
         </h1>
         <span className='Header__tagline--wide'>Rate all the things.</span>
+        {/* if auth token stored render logout link */}
         {TokenService.hasAuthToken()
           ? this.renderLogoutLink()
           : this.renderLoginLink()}
